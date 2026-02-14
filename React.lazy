@@ -1,0 +1,11 @@
+import { lazy, Suspense } from 'react';
+
+const HeavyChart = lazy(() => import('./components/HeavyChart'));
+
+function App() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <HeavyChart />
+    </Suspense>
+  );
+}
